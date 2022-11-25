@@ -13,6 +13,10 @@ body {
   margin: 0;
   overflow: hidden;
 }
+.oculto {
+  opacity: 0;
+  z-index: -999;
+}
 .container {
   display: flex;
   align-items: center;
@@ -20,9 +24,11 @@ body {
   height: 100%;
 }
 .card {
+  position: absolute;
   display: flex;
   border-radius: 8px;
   box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.36);
+  transition: opacity ease .5s
 }
 .card::before {
   content: "";
@@ -79,6 +85,7 @@ body {
   height: 48px;
   width: 48px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .card .container-icon .circle i {
   color: #ffffff;
